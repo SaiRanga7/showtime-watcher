@@ -1,0 +1,14 @@
+targets:
+  - movie: "Michael"
+    city: "hyderabad"
+    cinema_slug: "allu-cinemas-kokapet"
+    cinema_code: "ALUC"
+    cinema_name: "ALLU Cinemas Kokapet"
+    date: "2026-04-28"
+
+  - movie: "Kara"
+    city: "hyderabad"
+    cinema_slug: "allu-cinemas-kokapet"
+    cinema_code: "ALUC"
+    cinema_name: "ALLU Cinemas Kokapet"
+    date: "2026-05-15"
