@@ -10,9 +10,13 @@ from playwright.sync_api import sync_playwright
 from dotenv import dotenv_values
 
 ROOT = Path(__file__).parent
-SECRETS = dotenv_values(ROOT / ".env")
-TG_TOKEN = SECRETS["TELEGRAM_TOKEN"]
-TG_CHAT = SECRETS["TELEGRAM_CHAT_ID"]
+
+# Prefer env vars (CI), fall back to .env file (local dev)
+SECRETS = dotenv_values(ROOT / ".env") if (ROOT / ".env").exists() else {}
+TG_TOKEN = os.environ.get("TELEGRAM_TOKEN") or SECRETS.get("TELEGRAM_TOKEN")
+TG_CHAT = os.environ.get("TELEGRAM_CHAT_ID") or SECRETS.get("TELEGRAM_CHAT_ID")
+if not TG_TOKEN or not TG_CHAT:
+    raise SystemExit("Missing TELEGRAM_TOKEN or TELEGRAM_CHAT_ID")
 
 logging.basicConfig(
     level=logging.INFO,
@@ -72,7 +76,6 @@ def check_target(page, target):
     except Exception as e:
         return {"open": False, "movie_found": False, "showtimes": [], "reason": f"goto failed: {e}"}
 
-    # Let any client-side rendering finish
     page.wait_for_timeout(4000)
 
     body_text = page.locator("body").inner_text()
@@ -84,7 +87,6 @@ def check_target(page, target):
     is_closed = any(m.lower() in body_text.lower() for m in closed_markers)
 
     movie_query = target["movie"].lower()
-
     movie_links = page.locator(f"a[href*='/movies/{target['city']}/']").all()
 
     matched_showtimes = []
@@ -99,7 +101,7 @@ def check_target(page, target):
         movie_found = True
         row = link.locator("xpath=ancestor::div[@role='gridcell'][1]")
         if row.count() == 0:
-            row = link.locator("xpath=ancestor::div[3]")  # fallback
+            row = link.locator("xpath=ancestor::div[3]")
         try:
             row_text = row.inner_text()
         except Exception:
@@ -167,11 +169,15 @@ def run_once():
 
 
 if __name__ == "__main__":
-    interval = int(os.environ.get("POLL_SECONDS", "600"))
-    log.info("Starting watcher, interval=%ds", interval)
-    while True:
-        try:
-            run_once()
-        except Exception:
-            log.exception("run_once crashed")
-        time.sleep(interval)
+    if os.environ.get("ONESHOT") == "1":
+        log.info("One-shot mode")
+        run_once()
+    else:
+        interval = int(os.environ.get("POLL_SECONDS", "600"))
+        log.info("Loop mode, interval=%ds", interval)
+        while True:
+            try:
+                run_once()
+            except Exception:
+                log.exception("run_once crashed")
+            time.sleep(interval)
