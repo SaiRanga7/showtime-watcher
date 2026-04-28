@@ -2,7 +2,7 @@ name: Showtime Watcher
 
 on:
   schedule:
-    - cron: "0,30 8-23 * * *"
+    - cron: "0 8-23 * * *"
   workflow_dispatch:
 
 permissions:
