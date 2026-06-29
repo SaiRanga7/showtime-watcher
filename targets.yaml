@@ -1,11 +1,4 @@
-targets: 
-  - movie: "Sing Geetham"
-    city: "hyderabad"
-    cinema_slug: "prasads-multiplex-hyderabad"
-    cinema_code: "PRHN"
-    cinema_name: "Prasads Multiplex"
-    date: "2026-06-11" 
-
+targets:
   - movie: "Spider-Man: Brand New Day"
     city: "hyderabad"
     cinema_name: "ALLU Cinemas: Kokapet"
@@ -13,21 +6,21 @@ targets:
     cinema_code: "ALUC"
     date: "2026-07-30"
 
- - movie: "Spider-Man: Brand New Day"
+  - movie: "Spider-Man: Brand New Day"
     city: "hyderabad"
     cinema_name: "ALLU Cinemas: Kokapet"
     cinema_slug: "allu-cinemas-kokapet"
     cinema_code: "ALUC"
     date: "2026-07-31"
 
- - movie: "Spider-Man: Brand New Day"
+  - movie: "Spider-Man: Brand New Day"
     city: "hyderabad"
     cinema_name: "ALLU Cinemas: Kokapet"
     cinema_slug: "allu-cinemas-kokapet"
     cinema_code: "ALUC"
     date: "2026-08-01"
 
- - movie: "Obsession"
+  - movie: "Obsession"
     city: "hyderabad"
     cinema_name: "ALLU Cinemas: Kokapet"
     cinema_slug: "allu-cinemas-kokapet"
