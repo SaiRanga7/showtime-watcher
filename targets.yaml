@@ -20,7 +20,7 @@ targets:
     cinema_code: "ALUC"
     date: "2026-08-01"
 
-  - movie: "Obsession"
+  - movie: "obsession"
     city: "hyderabad"
     cinema_name: "ALLU Cinemas: Kokapet"
     cinema_slug: "allu-cinemas-kokapet"
