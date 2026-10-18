@@ -1,0 +1,491 @@
+{
+ "venueShowtimesFunctionalApi": {
+  "queries": {
+   "getShowtimesByVenue-ALUC-20261018": {
+    "status": "fulfilled",
+    "endpointName": "getShowtimesByVenue",
+    "originalArgs": {
+     "dateCode": "20261018",
+     "venueCode": "ALUC",
+     "regionCode": "HYD",
+     "memberId": "",
+     "bmsId": "REDACTED",
+     "appCode": "WEBV2",
+     "token": "REDACTED",
+     "lsId": "",
+     "vc": "ALUC"
+    },
+    "data": {
+     "ShowDatesArray": [
+      {
+       "DispDate": "Today, 18 Oct",
+       "DateCode": "20261018",
+       "Day": "Sunday",
+       "Month": "October",
+       "Date": "18",
+       "Year": "2026",
+       "isDisabled": false
+      },
+      {
+       "DispDate": "Tomorrow, 19 Oct",
+       "DateCode": "20261019",
+       "Day": "Monday",
+       "Month": "October",
+       "Date": "19",
+       "Year": "2026",
+       "isDisabled": false
+      },
+      {
+       "DispDate": "Tuesday, 20 Oct",
+       "DateCode": "20261020",
+       "Day": "Tuesday",
+       "Month": "October",
+       "Date": "20",
+       "Year": "2026",
+       "isDisabled": false
+      },
+      {
+       "DispDate": "Wednesday, 21 Oct",
+       "DateCode": "20261021",
+       "Day": "Wednesday",
+       "Month": "October",
+       "Date": "21",
+       "Year": "2026",
+       "isDisabled": true
+      },
+      {
+       "DispDate": "Thursday, 22 Oct",
+       "DateCode": "20261022",
+       "Day": "Thursday",
+       "Month": "October",
+       "Date": "22",
+       "Year": "2026",
+       "isDisabled": true
+      },
+      {
+       "DispDate": "Friday, 23 Oct",
+       "DateCode": "20261023",
+       "Day": "Friday",
+       "Month": "October",
+       "Date": "23",
+       "Year": "2026",
+       "isDisabled": true
+      },
+      {
+       "DispDate": "Saturday, 24 Oct",
+       "DateCode": "20261024",
+       "Day": "Saturday",
+       "Month": "October",
+       "Date": "24",
+       "Year": "2026",
+       "isDisabled": true
+      }
+     ],
+     "AllShowDatesDisabled": false,
+     "showDetailsTransformed": {
+      "Date": "20261018",
+      "Event": [
+       {
+        "EventTitle": "Street Fighter",
+        "EventGroup": "EG00479093",
+        "ChildEvents": [
+         {
+          "EventName": "Street Fighter (DOLBY CINEMA 2D) - English",
+          "EventCode": "ET00522270",
+          "EventLanguage": "English",
+          "EventDimension": "DOLBY CINEMA 2D",
+          "EventUrl": "street-fighter-dolby-cinema-2d",
+          "EventCensor": "UA16+",
+          "ShowTimes": [
+           {
+            "ShowDateTime": "202610181700",
+            "ShowDateCode": "20261018",
+            "ShowTime": "05:00 PM",
+            "ShowTimeCode": "1700",
+            "SessionId": "6108",
+            "AvailStatus": "2",
+            "MinPrice": "295.00",
+            "MaxPrice": "350.00",
+            "ScreenName": "SCREEN 1",
+            "CutOffDateTime": "202610181705",
+            "Categories": [
+             {
+              "PriceDesc": "PLATINUM",
+              "CurPrice": "350.00",
+              "AvailStatus": "1"
+             },
+             {
+              "PriceDesc": "DIRECTOR CHOICE",
+              "CurPrice": "350.00",
+              "AvailStatus": "1"
+             },
+             {
+              "PriceDesc": "GOLD",
+              "CurPrice": "295.00",
+              "AvailStatus": "1"
+             },
+             {
+              "PriceDesc": "GOLD.",
+              "CurPrice": "295.00",
+              "AvailStatus": "3"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "EventTitle": "Prahaar",
+        "EventGroup": "EG00499611",
+        "ChildEvents": [
+         {
+          "EventName": "Prahaar - Hindi",
+          "EventCode": "ET00502504",
+          "EventLanguage": "Hindi",
+          "EventDimension": "2D",
+          "EventUrl": "prahaar",
+          "EventCensor": "UA16+",
+          "ShowTimes": [
+           {
+            "ShowDateTime": "202610181715",
+            "ShowDateCode": "20261018",
+            "ShowTime": "05:15 PM",
+            "ShowTimeCode": "1715",
+            "SessionId": "6147",
+            "AvailStatus": "1",
+            "MinPrice": "295.00",
+            "MaxPrice": "350.00",
+            "ScreenName": "SCREEN 4",
+            "CutOffDateTime": "202610181720",
+            "Categories": [
+             {
+              "PriceDesc": "PLATINUM",
+              "CurPrice": "350.00",
+              "AvailStatus": "0"
+             },
+             {
+              "PriceDesc": "GOLD",
+              "CurPrice": "295.00",
+              "AvailStatus": "1"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "EventTitle": "Ranabaali",
+        "EventGroup": "EG00480978",
+        "ChildEvents": [
+         {
+          "EventName": "Ranabaali - Telugu",
+          "EventCode": "ET00483565",
+          "EventLanguage": "Telugu",
+          "EventDimension": "2D",
+          "EventUrl": "ranabaali",
+          "EventCensor": "UA16+",
+          "ShowTimes": [
+           {
+            "ShowDateTime": "202610181935",
+            "ShowDateCode": "20261018",
+            "ShowTime": "07:35 PM",
+            "ShowTimeCode": "1935",
+            "SessionId": "6143",
+            "AvailStatus": "1",
+            "MinPrice": "295.00",
+            "MaxPrice": "350.00",
+            "ScreenName": "SCREEN 3",
+            "CutOffDateTime": "202610181940",
+            "Categories": [
+             {
+              "PriceDesc": "PLATINUM",
+              "CurPrice": "350.00",
+              "AvailStatus": "0"
+             },
+             {
+              "PriceDesc": "GOLD",
+              "CurPrice": "295.00",
+              "AvailStatus": "1"
+             }
+            ]
+           },
+           {
+            "ShowDateTime": "202610182255",
+            "ShowDateCode": "20261018",
+            "ShowTime": "10:55 PM",
+            "ShowTimeCode": "2255",
+            "SessionId": "6139",
+            "AvailStatus": "1",
+            "MinPrice": "295.00",
+            "MaxPrice": "350.00",
+            "ScreenName": "SCREEN 2",
+            "CutOffDateTime": "202610182300",
+            "Categories": [
+             {
+              "PriceDesc": "PLATINUM",
+              "CurPrice": "350.00",
+              "AvailStatus": "0"
+             },
+             {
+              "PriceDesc": "GOLD",
+              "CurPrice": "295.00",
+              "AvailStatus": "1"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "EventTitle": "Jailer 2",
+        "EventGroup": "EG00515691",
+        "ChildEvents": [
+         {
+          "EventName": "Jailer 2 (DOLBY CINEMA 2D)(Telugu) - Telugu",
+          "EventCode": "ET00521930",
+          "EventLanguage": "Telugu",
+          "EventDimension": "DOLBY CINEMA 2D",
+          "EventUrl": "jailer-2-dolby-cinema-2dtelugu",
+          "EventCensor": "UA16+",
+          "ShowTimes": [
+           {
+            "ShowDateTime": "202610181955",
+            "ShowDateCode": "20261018",
+            "ShowTime": "07:55 PM",
+            "ShowTimeCode": "1955",
+            "SessionId": "6109",
+            "AvailStatus": "1",
+            "MinPrice": "295.00",
+            "MaxPrice": "350.00",
+            "ScreenName": "SCREEN 1",
+            "CutOffDateTime": "202610182000",
+            "Categories": [
+             {
+              "PriceDesc": "PLATINUM",
+              "CurPrice": "350.00",
+              "AvailStatus": "0"
+             },
+             {
+              "PriceDesc": "DIRECTOR CHOICE",
+              "CurPrice": "350.00",
+              "AvailStatus": "0"
+             },
+             {
+              "PriceDesc": "GOLD",
+              "CurPrice": "295.00",
+              "AvailStatus": "0"
+             },
+             {
+              "PriceDesc": "GOLD.",
+              "CurPrice": "295.00",
+              "AvailStatus": "1"
+             }
+            ]
+           },
+           {
+            "ShowDateTime": "202610182320",
+            "ShowDateCode": "20261018",
+            "ShowTime": "11:20 PM",
+            "ShowTimeCode": "2320",
+            "SessionId": "6110",
+            "AvailStatus": "1",
+            "MinPrice": "295.00",
+            "MaxPrice": "350.00",
+            "ScreenName": "SCREEN 1",
+            "CutOffDateTime": "202610182325",
+            "Categories": [
+             {
+              "PriceDesc": "PLATINUM",
+              "CurPrice": "350.00",
+              "AvailStatus": "0"
+             },
+             {
+              "PriceDesc": "DIRECTOR CHOICE",
+              "CurPrice": "350.00",
+              "AvailStatus": "0"
+             },
+             {
+              "PriceDesc": "GOLD",
+              "CurPrice": "295.00",
+              "AvailStatus": "0"
+             },
+             {
+              "PriceDesc": "GOLD.",
+              "CurPrice": "295.00",
+              "AvailStatus": "1"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "EventName": "Jailer 2 - Tamil",
+          "EventCode": "ET00518674",
+          "EventLanguage": "Tamil",
+          "EventDimension": "2D",
+          "EventUrl": "jailer-2",
+          "EventCensor": "UA16+",
+          "ShowTimes": [
+           {
+            "ShowDateTime": "202610182010",
+            "ShowDateCode": "20261018",
+            "ShowTime": "08:10 PM",
+            "ShowTimeCode": "2010",
+            "SessionId": "6215",
+            "AvailStatus": "1",
+            "MinPrice": "295.00",
+            "MaxPrice": "350.00",
+            "ScreenName": "SCREEN 4",
+            "CutOffDateTime": "202610182015",
+            "Categories": [
+             {
+              "PriceDesc": "PLATINUM",
+              "CurPrice": "350.00",
+              "AvailStatus": "0"
+             },
+             {
+              "PriceDesc": "GOLD",
+              "CurPrice": "295.00",
+              "AvailStatus": "1"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "EventTitle": "Garividi Lakshmi",
+        "EventGroup": "EG00517795",
+        "ChildEvents": [
+         {
+          "EventName": "Garividi Lakshmi - Telugu",
+          "EventCode": "ET00520562",
+          "EventLanguage": "Telugu",
+          "EventDimension": "2D",
+          "EventUrl": "garividi-lakshmi",
+          "EventCensor": "UA13+",
+          "ShowTimes": [
+           {
+            "ShowDateTime": "202610182005",
+            "ShowDateCode": "20261018",
+            "ShowTime": "08:05 PM",
+            "ShowTimeCode": "2005",
+            "SessionId": "6138",
+            "AvailStatus": "3",
+            "MinPrice": "295.00",
+            "MaxPrice": "350.00",
+            "ScreenName": "SCREEN 2",
+            "CutOffDateTime": "202610182010",
+            "Categories": [
+             {
+              "PriceDesc": "PLATINUM",
+              "CurPrice": "350.00",
+              "AvailStatus": "0"
+             },
+             {
+              "PriceDesc": "GOLD",
+              "CurPrice": "295.00",
+              "AvailStatus": "3"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "EventTitle": "Comrade Kalyan",
+        "EventGroup": "EG00516643",
+        "ChildEvents": [
+         {
+          "EventName": "Comrade Kalyan - Telugu",
+          "EventCode": "ET00519564",
+          "EventLanguage": "Telugu",
+          "EventDimension": "2D",
+          "EventUrl": "comrade-kalyan",
+          "EventCensor": "UA16+",
+          "ShowTimes": [
+           {
+            "ShowDateTime": "202610182305",
+            "ShowDateCode": "20261018",
+            "ShowTime": "11:05 PM",
+            "ShowTimeCode": "2305",
+            "SessionId": "6214",
+            "AvailStatus": "3",
+            "MinPrice": "295.00",
+            "MaxPrice": "350.00",
+            "ScreenName": "SCREEN 3",
+            "CutOffDateTime": "202610182310",
+            "Categories": [
+             {
+              "PriceDesc": "PLATINUM",
+              "CurPrice": "350.00",
+              "AvailStatus": "3"
+             },
+             {
+              "PriceDesc": "GOLD",
+              "CurPrice": "295.00",
+              "AvailStatus": "3"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "EventTitle": "Whalefall",
+        "EventGroup": "EG00503445",
+        "ChildEvents": [
+         {
+          "EventName": "Whalefall - English",
+          "EventCode": "ET00506502",
+          "EventLanguage": "English",
+          "EventDimension": "2D",
+          "EventUrl": "whalefall",
+          "EventCensor": "UA16+",
+          "ShowTimes": [
+           {
+            "ShowDateTime": "202610182325",
+            "ShowDateCode": "20261018",
+            "ShowTime": "11:25 PM",
+            "ShowTimeCode": "2325",
+            "SessionId": "6144",
+            "AvailStatus": "3",
+            "MinPrice": "295.00",
+            "MaxPrice": "350.00",
+            "ScreenName": "SCREEN 4",
+            "CutOffDateTime": "202610182330",
+            "Categories": [
+             {
+              "PriceDesc": "PLATINUM",
+              "CurPrice": "350.00",
+              "AvailStatus": "2"
+             },
+             {
+              "PriceDesc": "GOLD",
+              "CurPrice": "295.00",
+              "AvailStatus": "3"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "Venues": {
+       "VenueCode": "ALUC",
+       "VenueName": "ALLU Cinemas: Kokapet",
+       "isVenueDown": false
+      }
+     }
+    }
+   }
+  }
+ }
+}

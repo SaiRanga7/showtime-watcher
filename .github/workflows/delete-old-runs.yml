@@ -1,0 +1,43 @@
+name: Delete old runs (manual, one-off)
+
+# Removes the run history from before the fresh start (v1 runs and the first v2 tests).
+# Nothing runs this automatically: you start it from Actions → "Delete old runs" →
+# Run workflow, and type DELETE. Deleted runs and their logs can't be recovered.
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: "Type DELETE to permanently delete every run created before the fresh start"
+        required: true
+        default: ""
+
+permissions:
+  actions: write
+
+jobs:
+  delete:
+    if: inputs.confirm == 'DELETE'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+      CUTOFF: "2026-10-18T13:04:00Z" # the fresh-start push; newer runs are kept
+    steps:
+      - name: Delete runs created before the fresh start
+        run: |
+          gh api --paginate "repos/${GITHUB_REPOSITORY}/actions/runs?per_page=100" \
+            --jq ".workflow_runs[] | select(.created_at < \"${CUTOFF}\") | .id" > old_runs.txt
+          total=$(wc -l < old_runs.txt)
+          echo "Old runs found: ${total}"
+          # The workflow token allows ~1,000 API calls per hour, so delete at most 900 per run.
+          head -n 900 old_runs.txt | while read -r id; do
+            gh api -X DELETE "repos/${GITHUB_REPOSITORY}/actions/runs/${id}" --silent \
+              || echo "could not delete ${id}"
+          done
+          left=$((total - 900))
+          if [ "${left}" -gt 0 ]; then
+            echo "::notice title=Not finished::${left} old runs left (API limit). Run this again in an hour."
+          else
+            echo "::notice title=Done::All ${total} old runs deleted."
+          fi

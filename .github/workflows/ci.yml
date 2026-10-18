@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    paths: ["src/**", "tests/**", "pyproject.toml", "uv.lock", ".github/workflows/**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install uv
+        run: |
+          curl -LsSf "https://astral.sh/uv/0.11.32/install.sh" | sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - run: uv sync --frozen
+      - run: uv run ruff check .
+      - run: uv run ruff format --check .
+      - run: uv run pytest

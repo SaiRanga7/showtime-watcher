@@ -1,0 +1,16 @@
+# secrets and local environments
+.env
+.venv/
+venv/
+
+# Python / tooling caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# runtime files
+*.log
+*.tmp
+state.db
+.DS_Store

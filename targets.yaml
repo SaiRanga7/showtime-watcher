@@ -1,0 +1,17 @@
+# Movies to watch on BookMyShow. Add/remove from Telegram (/watch, /stop) or edit here.
+# Note: the bot rewrites this file, so comments other than this header are not kept.
+#
+# targets:
+#   - id: 1
+#     movie: Jailer 2                 # name (case-insensitive) or ET-code
+#     cinema: https://in.bookmyshow.com/cinemas/hyderabad/allu-cinemas-kokapet/buytickets/ALUC
+#     dates: ['2026-10-30']           # leave out for "any date"
+#     language: Telugu                # optional filters...
+#     format: dolby                   # matches "DOLBY CINEMA 2D"; also imax, 3d, 4dx ...
+#     after: '18:00'                  # earliest show start (24 h)
+#     before: '23:59'                 # latest show start
+#     notify: new                     # new = every new matching show, first = only once
+
+defaults:
+  cinema: https://in.bookmyshow.com/cinemas/hyderabad/allu-cinemas-kokapet/buytickets/ALUC
+targets: []
