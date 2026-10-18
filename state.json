@@ -1,0 +1,26 @@
+{
+  "health": {
+    "access_log": [
+      [
+        "2026-10-18T18:44+05:30",
+        "blocked"
+      ]
+    ],
+    "blind_alert_sent": false,
+    "failing_since": "2026-10-18T18:44+05:30",
+    "last_blind_alert": null,
+    "last_daily": "2026-10-18",
+    "last_error": "BookMyShow refused the request (HTTP 403, bot protection)"
+  },
+  "targets": {
+    "17bd3c9027bc": {
+      "first_open_at": null,
+      "note": "",
+      "notified": [],
+      "partial_alerted": false,
+      "status": "waiting"
+    }
+  },
+  "telegram_offset": 422810790,
+  "version": 2
+}

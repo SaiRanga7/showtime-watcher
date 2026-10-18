@@ -14,4 +14,7 @@
 
 defaults:
   cinema: https://in.bookmyshow.com/cinemas/hyderabad/allu-cinemas-kokapet/buytickets/ALUC
-targets: []
+targets:
+- id: 1
+  movie: ranabaali
+  cinema: https://in.bookmyshow.com/cinemas/hyderabad/allu-cinemas-kokapet/buytickets/ALUC
