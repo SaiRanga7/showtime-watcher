@@ -9,7 +9,7 @@
     "blind_alert_sent": true,
     "failing_since": "2026-10-18T18:44+05:30",
     "last_blind_alert": "2026-10-18T19:37+05:30",
-    "last_daily": "2026-10-18",
+    "last_daily": "2026-10-19",
     "last_error": "BookMyShow refused the request (HTTP 403, bot protection)"
   },
   "targets": {
